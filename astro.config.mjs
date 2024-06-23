@@ -6,6 +6,10 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astroship.web3templates.com",
+  site:
+    process.env.NODE_ENV !== "development"
+      ? "https://mauriciosoares.github.io"
+      : undefined,
+  base: process.env.NODE_ENV !== "development" ? "/speakidiomas" : undefined,
   integrations: [tailwind(), mdx(), sitemap(), icon()],
 });
