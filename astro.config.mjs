@@ -9,7 +9,7 @@ export default defineConfig({
   site:
     process.env.NODE_ENV !== "development"
       ? "https://mauriciosoares.github.io"
-      : undefined,
+      : "http://localhost:4321",
   base: process.env.NODE_ENV !== "development" ? "/speakidiomas" : undefined,
   integrations: [tailwind(), mdx(), sitemap(), icon()],
 });
